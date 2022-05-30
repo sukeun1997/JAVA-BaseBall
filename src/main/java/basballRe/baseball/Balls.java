@@ -16,6 +16,10 @@ public class Balls {
         return new Balls();
     }
 
+    public int getNumberOfIndex(int idx) {
+        return balls.get(idx);
+    }
+
     private ArrayList<Integer> createNumber() {
 
         ArrayList<Integer> list = new ArrayList<>();

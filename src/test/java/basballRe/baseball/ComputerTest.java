@@ -41,7 +41,12 @@ class ComputerTest {
 
         for (int i = 0; i < 100; i++) {
             Computer of = Computer.of();
-            assertEquals(of.getBalls(), 3);
+            int firstNumber = of.getBalls().getNumberOfIndex(0);
+            int secNumber = of.getBalls().getNumberOfIndex(1);
+            int threeNumber = of.getBalls().getNumberOfIndex(2);
+            assertNotEquals(firstNumber,secNumber);
+            assertNotEquals(secNumber,threeNumber);
+            assertNotEquals(firstNumber,threeNumber);
         }
     }
 

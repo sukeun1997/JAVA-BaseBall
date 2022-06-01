@@ -17,10 +17,32 @@ public class Running {
         Computer computer = Computer.of();
 
         while (!finish) {
+            baseBall.resetResult();
             Player player = new Player(inputView.InputNumber());
             baseBall.judgeBalls(computer.getBalls(),player.getBalls());
-            outputView.result(baseBall);
+            finish = outputView.result(baseBall);
         }
+
+        // 게임 끝난후 시작 or 종료
+        int answer = inputView.inputRestart();
+
+        if (answer == 1) {
+            restart();
+            return;
+        }
+
+        end();
+
+
+    }
+
+    private static void end() {
+        System.exit(0);
+    }
+
+    private static void restart() {
+        finish = false;
+        start();
     }
 
     private static void init() {

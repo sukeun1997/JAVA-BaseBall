@@ -11,7 +11,6 @@ public final class InputView {
 
     static final String INPUT_NUMBER = "숫자를 입력해 주세요 : ";
     private static final Scanner sc = new Scanner(System.in);
-    private static final Pattern PATTERN = Pattern.compile("[1-9]{3}");
 
     public String[] InputNumber() {
         print(INPUT_NUMBER);
@@ -30,4 +29,9 @@ public final class InputView {
         System.out.print(message);
     }
 
+    public int inputRestart() {
+        int answer = sc.nextInt();
+        Validation.validateAnswer(answer);
+        return answer;
+    }
 }

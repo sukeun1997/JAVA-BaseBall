@@ -1,10 +1,7 @@
 package basballRe.baseball;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public final class Validation {
     private static final Pattern PATTERN = Pattern.compile("[1-9]{3}");
@@ -25,8 +22,19 @@ public final class Validation {
 
     public static void isDifferentNumbers(String []  numbers) {
 
-        if (numbers[0].equals(numbers[1]) || numbers[1].equals(numbers[2]) || numbers[0].equals(numbers[2])) {
+        if (isSameNumber(numbers[0], numbers[1]) || isSameNumber(numbers[0],numbers[2]) || isSameNumber(numbers[1],numbers[2])) {
             throw new IllegalStateException("서로 다른 수를 입력해주세요");
+        }
+    }
+
+    private static boolean isSameNumber(String number1, String number2) {
+        return number1.equals(number2);
+    }
+
+    public static void validateAnswer(int answer) {
+
+        if (answer != 1 && answer != 2) {
+            throw new IllegalArgumentException("0 또는 1만 입력 해 주세요");
         }
     }
 }

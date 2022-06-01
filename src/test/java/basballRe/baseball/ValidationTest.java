@@ -20,4 +20,19 @@ class ValidationTest {
     void ballSize4() {
         assertThrows(IllegalStateException.class, () -> Validation.hasThreeBalls(List.of(1, 2, 3, 4)));
     }
+
+
+    @Test
+    @DisplayName("게임 종료 후 값이 1 또는 2 인경우")
+    void finishNumber0Or1() {
+        Validation.validateAnswer(1);
+        Validation.validateAnswer(2);
+    }
+
+    @Test
+    @DisplayName("게임 종료 후 값이 1 또는 0 이 아닌경우")
+    void finishNumberNot0Or1() {
+        assertThrows(IllegalArgumentException.class, () -> Validation.validateAnswer(3));
+        assertThrows(IllegalArgumentException.class, () -> Validation.validateAnswer(-1));
+    }
 }

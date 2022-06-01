@@ -1,5 +1,6 @@
 package basballRe.view;
 
+import basballRe.baseball.Validation;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InputViewTest {
 
-    InputView inputView = new InputView();
 
     @Test
     @DisplayName("[실패] 숫자가 아닌 문자 입력")
@@ -17,7 +17,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> inputView.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
     }
 
     @Test
@@ -28,7 +28,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> inputView.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
     }
 
     @Test
@@ -39,7 +39,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> inputView.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
     }
 
     @Test
@@ -50,6 +50,6 @@ class InputViewTest {
 
         // when
         //then
-        inputView.hasThreeNumber(Number);
+        Validation.hasThreeNumber(Number);
     }
 }

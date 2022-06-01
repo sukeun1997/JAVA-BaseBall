@@ -26,6 +26,7 @@ public class Balls {
     }
 
     public static Balls ofPlayer(String [] numbers) {
+        Validation.isDifferentNumbers(numbers);
         List<Integer> balls = Arrays.stream(numbers)
                 .map(s -> Integer.valueOf(s))
                 .collect(Collectors.toList());

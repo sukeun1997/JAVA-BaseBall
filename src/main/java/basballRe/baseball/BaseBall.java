@@ -50,4 +50,27 @@ public class BaseBall {
             judgeBallOfIndex(com, player,i);
         }
     }
+
+    @Override
+    public String toString() {
+
+        if (isNothing()) {
+            return "낫싱";
+        }
+
+        String result = "";
+        if (ball > 0) {
+            result += ball + " 볼";
+        }
+
+        if (strike > 0) {
+            result += strike + " 스트라이크";
+        }
+        return result;
+    }
+
+    public void resetResult() {
+        ball = 0;
+        strike = 0;
+    }
 }

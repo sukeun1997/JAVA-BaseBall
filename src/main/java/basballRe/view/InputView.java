@@ -1,6 +1,7 @@
 
 package basballRe.view;
 
+import basballRe.baseball.Validation;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
@@ -16,24 +17,13 @@ public final class InputView {
         print(INPUT_NUMBER);
         String next = sc.next().trim();
 
-        hasThreeNumber(next);
+        Validation.hasThreeNumber(next);
 
         return getNumberArray(next);
     }
 
     private String[] getNumberArray(String next) {
         return next.split("");
-    }
-
-    public void hasThreeNumber(String next) {
-
-        if (!isMatches(next)) {
-            throw new IllegalArgumentException("숫자를 입력 해 주세요.");
-        }
-    }
-
-    private boolean isMatches(String next) {
-        return PATTERN.matcher(next).matches();
     }
 
     private void print(String message) {

@@ -1,11 +1,11 @@
 package basballRe.baseball.model;
 
-public class Player {
+import basballRe.baseball.Balls;
 
-    private final String [] numbers;
+public class Player extends AbstractPlayer{
 
     public Player(String[] numbers) {
-        this.numbers = numbers;
+        super(Balls.ofPlayer(numbers));
     }
 
 

@@ -1,7 +1,9 @@
 package basballRe.baseball;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static basballRe.baseball.utils.NumberGenerator.generate;
 
@@ -17,9 +19,19 @@ public class Balls {
         this.balls = balls;
     }
 
-    public static Balls of() {
+
+
+    public static Balls ofComputer() {
         return new Balls();
     }
+
+    public static Balls ofPlayer(String [] numbers) {
+        List<Integer> balls = Arrays.stream(numbers)
+                .map(s -> Integer.valueOf(s))
+                .collect(Collectors.toList());
+        return new Balls(balls);
+    }
+
 
     public int getNumberOfIndex(int idx) {
         return balls.get(idx);

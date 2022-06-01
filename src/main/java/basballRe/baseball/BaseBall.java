@@ -43,4 +43,11 @@ public class BaseBall {
     private boolean isStrike(int comNumber, int playerNumber) {
         return comNumber == playerNumber;
     }
+
+    public void judgeBalls(Balls com, Balls player) {
+
+        for (int i = 0; i < 3; i++) {
+            judgeBallOfIndex(com, player,i);
+        }
+    }
 }

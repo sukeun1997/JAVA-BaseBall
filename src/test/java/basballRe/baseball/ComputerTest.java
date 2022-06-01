@@ -1,23 +1,15 @@
 package basballRe.baseball;
 
-import basballRe.baseball.model.Computer;
+import basballRe.baseball.model.Player;
 import basballRe.baseball.utils.NumberGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Set;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ComputerTest {
-
-    private Computer computer;
-    @BeforeEach
-    void before() {
-        computer = Computer.of();
-    }
 
     @Test
     @DisplayName("0~9 랜덤 숫자 생성 확인")
@@ -40,7 +32,7 @@ class ComputerTest {
     void generatorFirstNumber() throws Exception {
 
         for (int i = 0; i < 100; i++) {
-            Computer of = Computer.of();
+            Player of = Player.createComputer();
             int firstNumber = of.getBalls().getNumberOfIndex(0);
             int secNumber = of.getBalls().getNumberOfIndex(1);
             int threeNumber = of.getBalls().getNumberOfIndex(2);

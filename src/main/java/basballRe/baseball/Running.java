@@ -1,6 +1,5 @@
 package basballRe.baseball;
 
-import basballRe.baseball.model.Computer;
 import basballRe.baseball.model.Player;
 import basballRe.view.InputView;
 import basballRe.view.OutputView;
@@ -17,12 +16,12 @@ public class Running {
         init();
 
         // 컴퓨터 생성
-        Computer computer = Computer.of();
+        Player computer = Player.createComputer();
 
         // 3 스트라이크가 아니라면 반복하며 게임 진행
         while (!finish) {
             baseBall.resetVariable();
-            Player player = new Player(inputView.InputNumber());
+            Player player = Player.createPlayer(inputView.InputNumber());
             baseBall.judgeBalls(computer.getBalls(),player.getBalls());
             finish = outputView.result(baseBall);
         }

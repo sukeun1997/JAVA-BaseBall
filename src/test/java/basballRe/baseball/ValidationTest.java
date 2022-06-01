@@ -35,4 +35,25 @@ class ValidationTest {
         assertThrows(IllegalArgumentException.class, () -> Validation.validateAnswer(3));
         assertThrows(IllegalArgumentException.class, () -> Validation.validateAnswer(-1));
     }
+
+    @Test
+    @DisplayName("0,1 번째 숫자가 동일")
+    void sameNumberCheck1() {
+        String[] strings = {"0", "0", "2"};
+        assertThrows(IllegalArgumentException.class, () -> Validation.isDifferentNumbers(strings));
+    }
+
+    @Test
+    @DisplayName("1,2 번째 숫자가 동일")
+    void sameNumberCheck2() {
+        String[] strings = {"0", "1", "1"};
+        assertThrows(IllegalArgumentException.class, () -> Validation.isDifferentNumbers(strings));
+    }
+
+    @Test
+    @DisplayName("2,3 번째 숫자가 동일")
+    void sameNumberCheck3() {
+        String[] strings = {"2", "0", "2"};
+        assertThrows(IllegalArgumentException.class, () -> Validation.isDifferentNumbers(strings));
+    }
 }

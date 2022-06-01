@@ -23,7 +23,7 @@ public final class Validation {
     public static void isDifferentNumbers(String []  numbers) {
 
         if (isSameNumber(numbers[0], numbers[1]) || isSameNumber(numbers[0],numbers[2]) || isSameNumber(numbers[1],numbers[2])) {
-            throw new IllegalStateException("서로 다른 수를 입력해주세요");
+            throw new IllegalArgumentException("서로 다른 수를 입력해주세요");
         }
     }
 

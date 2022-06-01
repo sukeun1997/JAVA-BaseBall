@@ -13,11 +13,15 @@ public class Running {
     private static BaseBall baseBall;
 
     public static void start() {
+        // 게임 시작
         init();
+
+        // 컴퓨터 생성
         Computer computer = Computer.of();
 
+        // 3 스트라이크가 아니라면 반복하며 게임 진행
         while (!finish) {
-            baseBall.resetResult();
+            baseBall.resetVariable();
             Player player = new Player(inputView.InputNumber());
             baseBall.judgeBalls(computer.getBalls(),player.getBalls());
             finish = outputView.result(baseBall);

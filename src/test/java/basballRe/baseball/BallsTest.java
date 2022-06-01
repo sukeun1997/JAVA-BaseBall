@@ -1,6 +1,6 @@
 package basballRe.baseball;
 
-import org.assertj.core.api.Assertions;
+import basballRe.baseball.model.Balls;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

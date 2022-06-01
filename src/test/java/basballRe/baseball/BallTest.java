@@ -1,5 +1,6 @@
 package basballRe.baseball;
 
+import basballRe.baseball.model.Balls;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

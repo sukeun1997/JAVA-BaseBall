@@ -1,7 +1,5 @@
 package basballRe.baseball.model;
 
-import basballRe.baseball.Balls;
-
 public abstract class AbstractPlayer {
 
     private Balls balls;

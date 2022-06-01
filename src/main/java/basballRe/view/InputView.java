@@ -1,11 +1,9 @@
 
 package basballRe.view;
 
-import basballRe.baseball.Validation;
-import org.jetbrains.annotations.NotNull;
+import basballRe.baseball.utils.Validation;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public final class InputView {
 

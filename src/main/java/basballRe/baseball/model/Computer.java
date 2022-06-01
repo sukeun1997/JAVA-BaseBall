@@ -1,7 +1,5 @@
 package basballRe.baseball.model;
 
-import basballRe.baseball.Balls;
-
 /**
  * 서로 다른 3개의 숫자를 가지는 컴퓨터
  */

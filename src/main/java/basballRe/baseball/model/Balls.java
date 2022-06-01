@@ -1,4 +1,6 @@
-package basballRe.baseball;
+package basballRe.baseball.model;
+
+import basballRe.baseball.utils.Validation;
 
 import java.util.ArrayList;
 import java.util.Arrays;

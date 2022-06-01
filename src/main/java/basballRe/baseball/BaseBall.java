@@ -1,5 +1,7 @@
 package basballRe.baseball;
 
+import basballRe.baseball.model.Balls;
+
 public class BaseBall {
 
     private int ball = 0;
@@ -69,7 +71,7 @@ public class BaseBall {
         return result;
     }
 
-    public void resetResult() {
+    public void resetVariable() {
         ball = 0;
         strike = 0;
     }

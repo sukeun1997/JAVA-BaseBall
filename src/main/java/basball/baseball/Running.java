@@ -1,8 +1,8 @@
-package basballRe.baseball;
+package basball.baseball;
 
-import basballRe.baseball.model.Player;
-import basballRe.view.InputView;
-import basballRe.view.OutputView;
+import basball.baseball.model.Player;
+import basball.view.InputView;
+import basball.view.OutputView;
 
 public class Running {
 

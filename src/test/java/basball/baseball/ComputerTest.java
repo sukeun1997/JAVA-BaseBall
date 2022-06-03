@@ -1,9 +1,8 @@
-package basballRe.baseball;
+package basball.baseball;
 
-import basballRe.baseball.model.Player;
-import basballRe.baseball.utils.NumberGenerator;
+import basball.baseball.model.Player;
+import basball.baseball.utils.NumberGenerator;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

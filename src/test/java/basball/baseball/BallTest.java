@@ -1,6 +1,6 @@
-package basballRe.baseball;
+package basball.baseball;
 
-import basballRe.baseball.model.Balls;
+import basball.baseball.model.Balls;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

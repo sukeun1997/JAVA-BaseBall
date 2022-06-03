@@ -1,6 +1,6 @@
-package basballRe.view;
+package basball.view;
 
-import basballRe.baseball.BaseBall;
+import basball.baseball.BaseBall;
 
 public class OutputView {
 

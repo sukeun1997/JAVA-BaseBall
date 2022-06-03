@@ -1,13 +1,13 @@
-package basballRe.baseball.model;
+package basball.baseball.model;
 
-import basballRe.baseball.utils.Validation;
+import basball.baseball.utils.Validation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static basballRe.baseball.utils.NumberGenerator.generate;
+import static basball.baseball.utils.NumberGenerator.generate;
 
 public class Balls {
     public static final int COUNT = 3;

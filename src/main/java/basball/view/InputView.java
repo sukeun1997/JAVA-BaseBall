@@ -1,7 +1,7 @@
 
-package basballRe.view;
+package basball.view;
 
-import basballRe.baseball.utils.Validation;
+import basball.baseball.utils.Validation;
 
 import java.util.Scanner;
 

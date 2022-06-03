@@ -1,4 +1,4 @@
-package basballRe.baseball.model;
+package basball.baseball.model;
 
 public class Player {
 

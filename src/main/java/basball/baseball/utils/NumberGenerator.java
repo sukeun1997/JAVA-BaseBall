@@ -1,4 +1,4 @@
-package basballRe.baseball.utils;
+package basball.baseball.utils;
 
 import java.util.Random;
 

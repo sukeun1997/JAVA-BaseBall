@@ -1,6 +1,6 @@
-package basballRe.baseball;
+package basball.baseball;
 
-import basballRe.baseball.utils.Validation;
+import basball.baseball.utils.Validation;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

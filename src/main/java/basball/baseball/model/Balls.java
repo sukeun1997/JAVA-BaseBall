@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import static basball.baseball.utils.NumberGenerator.generate;
 
 public class Balls {
-    public static final int COUNT = 3;
+    private static final int COUNT = 3;
     private final List<Integer> balls;
 
     private Balls() {
@@ -53,7 +53,6 @@ public class Balls {
             list.add(number);
         }
 
-        Validation.hasThreeBalls(list);
         return list;
     }
 

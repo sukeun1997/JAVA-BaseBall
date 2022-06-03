@@ -1,6 +1,6 @@
-package basballRe.baseball;
+package basball.baseball;
 
-import basballRe.baseball.model.Balls;
+import basball.baseball.model.Balls;
 
 public class BaseBall {
 
@@ -22,6 +22,14 @@ public class BaseBall {
 
         return true;
     }
+
+    public void judgeBalls(Balls com, Balls player) {
+
+        for (int i = 0; i < 3; i++) {
+            judgeBallOfIndex(com, player, i);
+        }
+    }
+
     public void judgeBallOfIndex(Balls com, Balls player, int idx) {
 
         int comNumber = com.getNumberOfIndex(idx);
@@ -46,28 +54,35 @@ public class BaseBall {
         return comNumber == playerNumber;
     }
 
-    public void judgeBalls(Balls com, Balls player) {
-
-        for (int i = 0; i < 3; i++) {
-            judgeBallOfIndex(com, player,i);
-        }
-    }
-
-    @Override
-    public String toString() {
-
+    public String getResult() {
         if (isNothing()) {
             return "낫싱";
         }
 
         String result = "";
-        if (ball > 0) {
-            result += ball + " 볼";
-        }
 
-        if (strike > 0) {
-            result += strike + " 스트라이크";
+        if (ball > 0)
+            result = addBallResult(result);
+
+        if (strike > 0)
+            result = addStrikeResult(result);
+
+        return result;
+    }
+
+    private String addStrikeResult(String result) {
+        if (ball > 0) {
+            result += " ";
         }
+        result += strike + " 스트라이크";
+
+        return result;
+    }
+
+    private String addBallResult(String result) {
+
+        result += ball + " 볼";
+
         return result;
     }
 

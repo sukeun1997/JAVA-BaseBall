@@ -1,24 +1,22 @@
-package basballRe.baseball.model;
-
-import basballRe.baseball.utils.Validation;
+package basball.baseball.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Random;
 
-import static basballRe.baseball.utils.NumberGenerator.generate;
+import static basball.baseball.model.Balls.NumberGenerator.generate;
+import static basball.view.InputView.Validator.isDifferentNumbers;
 
 public class Balls {
-    public static final int COUNT = 3;
+    private static final int COUNT = 3;
     private final List<Integer> balls;
-
-    private Balls() {
-        this.balls = createNumber();
-    }
 
     public Balls(List<Integer> balls) {
         this.balls = balls;
+    }
+
+    private Balls() {
+        this.balls = createNumber();
     }
 
 
@@ -27,12 +25,20 @@ public class Balls {
         return new Balls();
     }
 
-    public static Balls ofPlayer(String [] numbers) {
-        Validation.isDifferentNumbers(numbers);
-        List<Integer> balls = Arrays.stream(numbers)
-                .map(s -> Integer.valueOf(s))
-                .collect(Collectors.toList());
-        return new Balls(balls);
+    public static Balls ofPlayer(int [] numbers) {
+        isDifferentNumbers(numbers);
+
+        return new Balls(getBalls(numbers));
+    }
+
+    private static List<Integer> getBalls(int[] numbers) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int number : numbers) {
+            list.add(number);
+        }
+
+        return list;
     }
 
 
@@ -53,7 +59,6 @@ public class Balls {
             list.add(number);
         }
 
-        Validation.hasThreeBalls(list);
         return list;
     }
 
@@ -66,5 +71,14 @@ public class Balls {
         }
 
         return number;
+    }
+
+    public static class NumberGenerator {
+
+        private final static Random random = new Random();
+        public static int generate() {
+            return random.nextInt(9)+1;
+        }
+
     }
 }

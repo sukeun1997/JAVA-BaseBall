@@ -56,12 +56,9 @@ public class Running {
 
     public static class Validator {
         private static final Pattern PATTERN = Pattern.compile("[1-9]{3}");
-        private static boolean isMatches(String next) {
-            return PATTERN.matcher(next).matches();
-        }
         public static void hasThreeNumber(String next) {
 
-            if (!isMatches(next)) {
+            if (!PATTERN.matcher(next).matches()) {
                 throw new IllegalArgumentException("서로 다른 3자리 숫자만 입력 해주세요");
             }
         }
@@ -80,7 +77,7 @@ public class Running {
         public static void validateAnswer(int answer) {
 
             if (answer != 1 && answer != 2) {
-                throw new IllegalArgumentException("0 또는 1만 입력 해 주세요");
+                throw new IllegalArgumentException("1 또는 2만 입력 해 주세요");
             }
         }
     }

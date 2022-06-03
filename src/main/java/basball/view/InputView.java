@@ -3,6 +3,7 @@ package basball.view;
 
 import basball.baseball.Running;
 import basball.baseball.Running.Validator;
+import basball.baseball.model.GameStatus;
 
 import java.util.Scanner;
 
@@ -28,9 +29,13 @@ public final class InputView {
         System.out.print(message);
     }
 
-    public int inputRestart() {
+    public GameStatus inputRestart() {
         int answer = sc.nextInt();
         Validator.validateAnswer(answer);
-        return answer;
+
+        if (answer == 1) {
+            return GameStatus.RUNNING;
+        }
+        return GameStatus.END;
     }
 }

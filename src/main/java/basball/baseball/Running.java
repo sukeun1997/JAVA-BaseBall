@@ -1,5 +1,6 @@
 package basball.baseball;
 
+import basball.baseball.model.GameStatus;
 import basball.baseball.model.Player;
 import basball.view.InputView;
 import basball.view.OutputView;
@@ -8,51 +9,38 @@ import java.util.regex.Pattern;
 
 public class Running {
 
-    private static boolean finish;
+    private static boolean isFinished;
     private static final InputView inputView = new InputView();
     private static final OutputView outputView = new OutputView();
-    private static BaseBall baseBall;
+    private static final BaseBall baseBall = new BaseBall();
+    private static GameStatus status;
 
     public static void start() {
+
         // 게임 시작
-        init();
+        while (status == GameStatus.RUNNING) {
 
-        // 컴퓨터 생성
-        Player computer = Player.createComputer();
+            // 컴퓨터 생성
+            Player computer = Player.createComputer();
 
-        // 3 스트라이크가 아니라면 반복하며 게임 진행
-        while (!finish) {
-            baseBall.resetVariable();
-            Player player = Player.createPlayer(inputView.InputNumber());
-            baseBall.judgeBalls(computer.getBalls(),player.getBalls());
-            finish = outputView.result(baseBall);
+            // 3 스트라이크가 아니라면 반복하며 게임 진행
+            while (!isFinished) {
+                baseBall.resetVariable();
+                Player player = Player.createPlayer(inputView.InputNumber());
+                baseBall.judgeBalls(computer.getBalls(), player.getBalls());
+                isFinished = outputView.result(baseBall);
+            }
+
+            // 게임 끝난후 시작 or 종료
+            status = inputView.inputRestart();
+
+            if (status != GameStatus.END) {
+                isFinished = false;
+            }
         }
-
-        // 게임 끝난후 시작 or 종료
-        int answer = inputView.inputRestart();
-
-        if (answer == 1) {
-            restart();
-            return;
-        }
-
-        end();
-
-
     }
 
-    private static void end() {
-        System.exit(0);
-    }
 
-    private static void restart() {
-        finish = false;
-        start();
-    }
-
-    private static void init() {
-         baseBall = new BaseBall();
-    }
 
     public static class Validator {
         private static final Pattern PATTERN = Pattern.compile("[1-9]{3}");

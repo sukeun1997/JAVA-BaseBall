@@ -1,6 +1,7 @@
 package basball.view;
 
-import basball.baseball.utils.Validation;
+import basball.baseball.Running;
+import basball.baseball.Running.Validator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validator.hasThreeNumber(Number));
     }
 
     @Test
@@ -28,7 +29,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validator.hasThreeNumber(Number));
     }
 
     @Test
@@ -39,7 +40,7 @@ class InputViewTest {
 
         // when
         //then
-        assertThrows(IllegalArgumentException.class, () -> Validation.hasThreeNumber(Number));
+        assertThrows(IllegalArgumentException.class, () -> Validator.hasThreeNumber(Number));
     }
 
     @Test
@@ -50,6 +51,6 @@ class InputViewTest {
 
         // when
         //then
-        Validation.hasThreeNumber(Number);
+        Validator.hasThreeNumber(Number);
     }
 }

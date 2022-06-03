@@ -1,12 +1,13 @@
 package basball.baseball.model;
 
-import basball.baseball.utils.Validation;
+import basball.baseball.Running;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static basball.baseball.Running.Validator.*;
 import static basball.baseball.utils.NumberGenerator.generate;
 
 public class Balls {
@@ -28,7 +29,7 @@ public class Balls {
     }
 
     public static Balls ofPlayer(String [] numbers) {
-        Validation.isDifferentNumbers(numbers);
+        isDifferentNumbers(numbers);
         List<Integer> balls = Arrays.stream(numbers)
                 .map(s -> Integer.valueOf(s))
                 .collect(Collectors.toList());

@@ -1,7 +1,8 @@
 
 package basball.view;
 
-import basball.baseball.utils.Validation;
+import basball.baseball.Running;
+import basball.baseball.Running.Validator;
 
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public final class InputView {
         print(INPUT_NUMBER);
         String next = sc.next().trim();
 
-        Validation.hasThreeNumber(next);
+        Validator.hasThreeNumber(next);
 
         return getNumberArray(next);
     }
@@ -29,7 +30,7 @@ public final class InputView {
 
     public int inputRestart() {
         int answer = sc.nextInt();
-        Validation.validateAnswer(answer);
+        Validator.validateAnswer(answer);
         return answer;
     }
 }

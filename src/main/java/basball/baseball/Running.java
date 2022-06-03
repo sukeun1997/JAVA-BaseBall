@@ -13,7 +13,7 @@ public class Running {
     private static final InputView inputView = new InputView();
     private static final OutputView outputView = new OutputView();
     private static final BaseBall baseBall = new BaseBall();
-    private static GameStatus status;
+    private static GameStatus status = GameStatus.RUNNING;
 
     public static void start() {
 

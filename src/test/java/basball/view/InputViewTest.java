@@ -1,6 +1,6 @@
 package basball.view;
 
-import basball.baseball.Running.Validator;
+import basball.view.InputView.Validator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

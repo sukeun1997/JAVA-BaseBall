@@ -1,10 +1,11 @@
 package basball.baseball;
 
-import basball.baseball.Running.Validator;
+import basball.view.InputView;
+import basball.view.InputView.Validator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ValidatorTest {
 

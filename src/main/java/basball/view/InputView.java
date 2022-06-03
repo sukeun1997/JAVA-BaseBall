@@ -13,7 +13,7 @@ public final class InputView {
     private static final Scanner sc = new Scanner(System.in);
 
     public int[] getInputNumber() {
-        System.out.println(INPUT_NUMBER_MESSAGE);
+        System.out.print(INPUT_NUMBER_MESSAGE);
         String next = sc.next().trim();
 
         Validator.hasThreeNumber(next);
@@ -27,10 +27,10 @@ public final class InputView {
 
 
     public GameStatus getRestartInput() {
-        int answer = sc.nextInt();
+        String answer = sc.next();
         Validator.validateAnswer(answer);
 
-        if (answer == 1) {
+        if (answer.equals("1")) {
             return GameStatus.RUNNING;
         }
         return GameStatus.END;

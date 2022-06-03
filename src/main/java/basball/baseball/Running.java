@@ -62,9 +62,8 @@ public class Running {
             return number1 == number2;
         }
 
-        public static void validateAnswer(int answer) {
-
-            if (answer != 1 && answer != 2) {
+        public static void validateAnswer(String answer) {
+            if (!answer.equals("1") && !answer.equals("2")) {
                 throw new IllegalArgumentException("1 또는 2만 입력 해 주세요");
             }
         }

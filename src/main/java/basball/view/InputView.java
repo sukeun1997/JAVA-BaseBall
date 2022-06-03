@@ -1,19 +1,19 @@
 
 package basball.view;
 
-import basball.baseball.Running;
 import basball.baseball.Running.Validator;
 import basball.baseball.model.GameStatus;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public final class InputView {
 
-    static final String INPUT_NUMBER = "숫자를 입력해 주세요 : ";
+    private static final String INPUT_NUMBER_MESSAGE = "숫자를 입력해 주세요 : ";
     private static final Scanner sc = new Scanner(System.in);
 
-    public String[] InputNumber() {
-        print(INPUT_NUMBER);
+    public int[] getInputNumber() {
+        System.out.println(INPUT_NUMBER_MESSAGE);
         String next = sc.next().trim();
 
         Validator.hasThreeNumber(next);
@@ -21,13 +21,10 @@ public final class InputView {
         return getNumberArray(next);
     }
 
-    private String[] getNumberArray(String next) {
-        return next.split("");
+    private int[] getNumberArray(String next) {
+        return Arrays.stream(next.split("")).mapToInt(value -> Integer.parseInt(value)).toArray();
     }
 
-    private void print(String message) {
-        System.out.print(message);
-    }
 
     public GameStatus inputRestart() {
         int answer = sc.nextInt();

@@ -26,7 +26,7 @@ public class Running {
             // 3 스트라이크가 아니라면 반복하며 게임 진행
             while (!isFinished) {
                 baseBall.resetVariable();
-                Player player = Player.createPlayer(inputView.InputNumber());
+                Player player = Player.createPlayer(inputView.getInputNumber());
                 baseBall.judgeBalls(computer.getBalls(), player.getBalls());
                 isFinished = outputView.result(baseBall);
             }
@@ -51,15 +51,15 @@ public class Running {
             }
         }
 
-        public static void isDifferentNumbers(String []  numbers) {
+        public static void isDifferentNumbers(int []  numbers) {
 
             if (isSameNumber(numbers[0], numbers[1]) || isSameNumber(numbers[0],numbers[2]) || isSameNumber(numbers[1],numbers[2])) {
                 throw new IllegalArgumentException("서로 다른 수를 입력해주세요");
             }
         }
 
-        private static boolean isSameNumber(String number1, String number2) {
-            return number1.equals(number2);
+        private static boolean isSameNumber(int number1, int number2) {
+            return number1 == number2;
         }
 
         public static void validateAnswer(int answer) {

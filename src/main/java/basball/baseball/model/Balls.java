@@ -1,6 +1,7 @@
 package basball.baseball.model;
 
 import basball.baseball.Running;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,12 +30,20 @@ public class Balls {
         return new Balls();
     }
 
-    public static Balls ofPlayer(String [] numbers) {
+    public static Balls ofPlayer(int [] numbers) {
         isDifferentNumbers(numbers);
-        List<Integer> balls = Arrays.stream(numbers)
-                .map(s -> Integer.valueOf(s))
-                .collect(Collectors.toList());
-        return new Balls(balls);
+
+        return new Balls(getBalls(numbers));
+    }
+
+    private static List<Integer> getBalls(int[] numbers) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int number : numbers) {
+            list.add(number);
+        }
+
+        return list;
     }
 
 

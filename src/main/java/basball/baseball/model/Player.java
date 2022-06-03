@@ -8,7 +8,7 @@ public class Player {
         return new Player(Balls.ofComputer());
     }
 
-    public static Player createPlayer(String[] number) {
+    public static Player createPlayer(int[] number) {
         return new Player(Balls.ofPlayer(number));
     }
 

@@ -28,7 +28,7 @@ public class Running {
                 baseBall.resetVariable();
                 Player player = Player.createPlayer(inputView.getInputNumber());
                 baseBall.judgeBalls(computer.getBalls(), player.getBalls());
-                isFinished = outputView.result(baseBall);
+                isFinished = outputView.getResult(baseBall);
             }
 
             // 게임 끝난후 시작 or 종료

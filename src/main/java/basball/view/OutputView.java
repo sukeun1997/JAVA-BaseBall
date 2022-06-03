@@ -9,7 +9,7 @@ public class OutputView {
     public static final String GAME_END_MESSAGE = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
 
     public boolean result(BaseBall baseBall) {
-        println(baseBall.toString());
+        println(baseBall.getResult());
 
         if (isGameEnd(baseBall)) return true;
 

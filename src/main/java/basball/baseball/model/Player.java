@@ -4,10 +4,6 @@ public class Player {
 
     private Balls balls;
 
-    private Player() {
-
-    }
-
     public static Player createComputer() {
         return new Player(Balls.ofComputer());
     }

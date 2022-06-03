@@ -26,7 +26,7 @@ public final class InputView {
     }
 
 
-    public GameStatus inputRestart() {
+    public GameStatus getRestartInput() {
         int answer = sc.nextInt();
         Validator.validateAnswer(answer);
 

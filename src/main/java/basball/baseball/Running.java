@@ -32,7 +32,7 @@ public class Running {
             }
 
             // 게임 끝난후 시작 or 종료
-            status = inputView.inputRestart();
+            status = inputView.getRestartInput();
 
             if (status != GameStatus.END) {
                 isFinished = false;

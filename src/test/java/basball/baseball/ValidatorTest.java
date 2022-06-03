@@ -8,20 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ValidationTest {
-
-    @Test
-    @DisplayName("볼 사이즈 3개라 성공")
-    void ballSize3() {
-        Validation.hasThreeBalls(List.of(1,2,3));
-    }
-
-    @Test
-    @DisplayName("볼 사이즈 3개 아니라 실패")
-    void ballSize4() {
-        assertThrows(IllegalStateException.class, () -> Validation.hasThreeBalls(List.of(1, 2, 3, 4)));
-    }
-
+class ValidatorTest {
 
     @Test
     @DisplayName("게임 종료 후 값이 1 또는 2 인경우")

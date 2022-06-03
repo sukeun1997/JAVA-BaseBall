@@ -5,10 +5,11 @@ import basball.baseball.Running;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import static basball.baseball.Running.Validator.*;
-import static basball.baseball.utils.NumberGenerator.generate;
+import static basball.baseball.model.Balls.NumberGenerator.generate;
 
 public class Balls {
     private static final int COUNT = 3;
@@ -66,5 +67,15 @@ public class Balls {
         }
 
         return number;
+    }
+
+
+    public static class NumberGenerator {
+
+        public static int generate() {
+            Random random = new Random();
+            return random.nextInt(9)+1;
+        }
+
     }
 }

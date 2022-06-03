@@ -1,12 +1,12 @@
 package basball.baseball;
 
+import basball.baseball.model.Balls.NumberGenerator;
 import basball.baseball.model.Player;
-import basball.baseball.utils.NumberGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class ComputerTest {
 

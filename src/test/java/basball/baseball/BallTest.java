@@ -16,42 +16,42 @@ public class BallTest {
 
     @Test
     @DisplayName("1번째 자리 1 볼")
-    void oneBall() {
+    void judgeBallOfIndexTest_1() {
         player = new Balls(List.of(3, 0, 0));
         isBallOfIndex(0);
     }
 
     @Test
     @DisplayName("1번째 자리 1 스트라이크")
-    void oneStrike() {
+    void judgeBallOfIndexTest_2() {
         player = new Balls(List.of(1, 0, 0));
         isStrikeOfIndex(0);
     }
 
     @Test
     @DisplayName("2번째 자리 볼")
-    void oneBall_2() {
+    void judgeBallOfIndexTest_3() {
         player = new Balls(List.of(0, 1, 0));
         isBallOfIndex(1);
     }
 
     @Test
     @DisplayName("2번째 자리 스트라이크")
-    void oneStrike_2() {
+    void judgeBallOfIndexTest_4() {
         player = new Balls(List.of(0, 2, 0));
         isStrikeOfIndex(1);
     }
 
     @Test
     @DisplayName("3번째 자리 볼")
-    void oneBall_3() {
+    void judgeBallOfIndexTest_5() {
         player = new Balls(List.of(0, 0, 1));
         isBallOfIndex(2);
     }
 
     @Test
     @DisplayName("3번째 자리 스트라이크")
-    void oneStrike_3() {
+    void judgeBallOfIndexTest_6() {
         player = new Balls(List.of(0, 0, 3));
         isStrikeOfIndex(2);
     }

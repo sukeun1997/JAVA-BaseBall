@@ -72,8 +72,8 @@ public class Balls {
 
     public static class NumberGenerator {
 
+        private final static Random random = new Random();
         public static int generate() {
-            Random random = new Random();
             return random.nextInt(9)+1;
         }
 

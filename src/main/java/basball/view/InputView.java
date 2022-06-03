@@ -25,7 +25,6 @@ public final class InputView {
         return Arrays.stream(next.split("")).mapToInt(value -> Integer.parseInt(value)).toArray();
     }
 
-
     public GameStatus getRestartInput() {
         String answer = sc.next();
         Validator.validateAnswer(answer);

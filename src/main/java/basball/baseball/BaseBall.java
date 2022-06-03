@@ -23,6 +23,13 @@ public class BaseBall {
         return true;
     }
 
+    public void judgeBalls(Balls com, Balls player) {
+
+        for (int i = 0; i < 3; i++) {
+            judgeBallOfIndex(com, player, i);
+        }
+    }
+
     public void judgeBallOfIndex(Balls com, Balls player, int idx) {
 
         int comNumber = com.getNumberOfIndex(idx);
@@ -45,13 +52,6 @@ public class BaseBall {
 
     private boolean isStrike(int comNumber, int playerNumber) {
         return comNumber == playerNumber;
-    }
-
-    public void judgeBalls(Balls com, Balls player) {
-
-        for (int i = 0; i < 3; i++) {
-            judgeBallOfIndex(com, player, i);
-        }
     }
 
     public String getResult() {

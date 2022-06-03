@@ -25,7 +25,6 @@ class ComputerTest {
         }
     }
 
-
     @Test
     @DisplayName("컴퓨터 서로 다른 숫자 3개 생성 확인")
     void createComputerTest() {

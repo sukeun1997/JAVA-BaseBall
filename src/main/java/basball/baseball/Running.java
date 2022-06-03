@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 
 public class Running {
 
-    private static boolean isFinished;
     private static final InputView inputView = new InputView();
     private static final OutputView outputView = new OutputView();
     private static final BaseBall baseBall = new BaseBall();
     private static GameStatus status = GameStatus.RUNNING;
+    private static boolean isFinished;
 
     public static void start() {
 
@@ -40,10 +40,9 @@ public class Running {
         }
     }
 
-
-
     public static class Validator {
         private static final Pattern PATTERN = Pattern.compile("[1-9]{3}");
+
         public static void hasThreeNumber(String next) {
 
             if (!PATTERN.matcher(next).matches()) {
@@ -51,9 +50,9 @@ public class Running {
             }
         }
 
-        public static void isDifferentNumbers(int []  numbers) {
+        public static void isDifferentNumbers(int[] numbers) {
 
-            if (isSameNumber(numbers[0], numbers[1]) || isSameNumber(numbers[0],numbers[2]) || isSameNumber(numbers[1],numbers[2])) {
+            if (isSameNumber(numbers[0], numbers[1]) || isSameNumber(numbers[0], numbers[2]) || isSameNumber(numbers[1], numbers[2])) {
                 throw new IllegalArgumentException("서로 다른 수를 입력해주세요");
             }
         }

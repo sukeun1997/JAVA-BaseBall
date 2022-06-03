@@ -16,12 +16,12 @@ public class Balls {
     private static final int COUNT = 3;
     private final List<Integer> balls;
 
-    private Balls() {
-        this.balls = createNumber();
-    }
-
     public Balls(List<Integer> balls) {
         this.balls = balls;
+    }
+
+    private Balls() {
+        this.balls = createNumber();
     }
 
 
@@ -77,7 +77,6 @@ public class Balls {
 
         return number;
     }
-
 
     public static class NumberGenerator {
 

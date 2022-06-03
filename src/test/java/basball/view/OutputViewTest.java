@@ -19,6 +19,7 @@ class OutputViewTest {
     void beforeEach() {
         baseBall = new BaseBall();
     }
+
     @Test
     @DisplayName("3 스트라이크가 아니라서 false")
     void resultTest_1() {

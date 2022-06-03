@@ -28,7 +28,6 @@ public class BallTest {
         isStrikeOfIndex(0);
     }
 
-
     @Test
     @DisplayName("2번째 자리 볼")
     void oneBall_2() {
@@ -42,6 +41,7 @@ public class BallTest {
         player = new Balls(List.of(0, 2, 0));
         isStrikeOfIndex(1);
     }
+
     @Test
     @DisplayName("3번째 자리 볼")
     void oneBall_3() {

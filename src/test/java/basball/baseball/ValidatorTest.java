@@ -18,7 +18,6 @@ class ValidatorTest {
         validateWrongAnswer("a2");
     }
 
-
     @Test
     @DisplayName("게임 종료 후 값이 1 또는 2 인경우")
     void validateAnswerTest_2() {
@@ -78,6 +77,7 @@ class ValidatorTest {
     void hasThreeNumberTest_3() {
         validateWrongNumber("23");
     }
+
     @Test
     @DisplayName("숫자 4개 이상 입력")
     void hasThreeNumberTest_4() {

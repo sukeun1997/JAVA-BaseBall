@@ -4,6 +4,10 @@ public class Player {
 
     private Balls balls;
 
+    public Player(Balls balls) {
+        this.balls = balls;
+    }
+
     public static Player createComputer() {
         return new Player(Balls.ofComputer());
     }
@@ -14,9 +18,5 @@ public class Player {
 
     public Balls getBalls() {
         return balls;
-    }
-
-    public Player(Balls balls) {
-        this.balls = balls;
     }
 }

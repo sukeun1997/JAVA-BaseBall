@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class InputViewTest {
 
-
     @Test
     @DisplayName("숫자가 아닌 문자 입력")
     void hasThreeNumberTest_1() throws Exception {
